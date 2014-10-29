@@ -1,0 +1,3 @@
+/* 跨浏览器取得窗口左边和上边的位置*/
+var leftPos = (typeof windows.screenLeft == "number")? windows.screenLeft : windows.screenX;
+var topPos = (typeof windows.screenTop == "number")? windows.screenTop : windows.screenY;
