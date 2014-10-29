@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title></title>
+	<script type="text/javascript">
+	function Person(name,sex){
+		this.name=name;
+		this.sex=sex;
+	}
+	Person.prototype.sayName=function(){
+		alert(this.name);
+	}
+	Person.prototype.saySex=function(){
+		alert(this.sex)
+	}
+	var P1= new Person('lvDada','男');
+	var P2 = new Person('xiaYangnan','女');
+	P1.sayName();
+	P1.saySex();
+	P2.sayName();
+	P2.saySex();
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
