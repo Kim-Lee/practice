@@ -8,11 +8,19 @@
 		this.name=name;
 		this.sex=sex;
 	}
-	Person.prototype.sayName=function(){
+	/*Person.prototype.sayName=function(){
 		alert(this.name);
 	}
 	Person.prototype.saySex=function(){
 		alert(this.sex)
+	}*/
+	Person.prototype = {
+		sayName:function(){
+			alert(this.name);
+		},
+		saySex:function(){
+			alert(this.sex);
+		}
 	}
 	var P1= new Person('lvDada','男');
 	var P2 = new Person('xiaYangnan','女');
