@@ -16,7 +16,7 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif] -->
-        <style type="text/css">
+        <!-- <style type="text/css">
         #div0{
                 position: relative;
             }
@@ -33,7 +33,7 @@
                 right: 0px;
             }
             
-        </style>
+        </style> -->
     </head>
     <body>
         <!-- <div class="container">
@@ -73,14 +73,57 @@
         <li class=><a href="#">苹果</a></li>
     </ul>
 </div> -->
-<div id="div0">
+<!-- <div id="div0">
     <div id="div1"> </div>   
     <div id="div2">dd</div>
+</div> -->
+<!-- Nav tabs -->
+<!-- <ul class="nav nav-tabs" role="tablist">
+  <li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">Home</a></li>
+  <li role="presentation"><a href="#profile" role="tab" data-toggle="tab">Profile</a></li>
+  <li role="presentation"><a href="#messages" role="tab" data-toggle="tab">Messages</a></li>
+  <li role="presentation"><a href="#settings" role="tab" data-toggle="tab">Settings</a></li>
+</ul> -->
+
+<!-- Tab panes -->
+<!-- <div class="tab-content">
+  <div role="tabpanel" class="tab-pane active" id="home">达达</div>
+  <div role="tabpanel" class="tab-pane" id="profile">楠楠</div>
+  <div role="tabpanel" class="tab-pane" id="messages">...</div>
+  <div role="tabpanel" class="tab-pane" id="settings">...</div>
 </div>
-        
+         -->
+
+<ul>
+    <li title="1">苹果0</li>
+    <li title="1">苹果1</li>
+    <li title="1">苹果2</li>
+    <li title="1">苹果3</li>
+    <li title="2" style="display:none">苹果4</li>
+    <li title="2" style="display:none">苹果5</li>
+    <li title="2" style="display:none">苹果6</li>
+</ul>
+<a href="javascript:;">更多</a>
+
         <!-- 如果要使用Bootstrap的js插件，必须先调入jQuery -->
         <script src="http://libs.baidu.com/jquery/1.9.0/jquery.min.js"></script>
         <!-- 包括所有bootstrap的js插件或者可以根据需要使用的js插件调用　-->
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> 
+        <script>
+    $(function(){
+        $("a").click(function(){
+          
+        if($("a").text()=="更多"){
+            
+            $("li[title='2']").css("display","list-item");
+            $("a").text("简化");
+        }  else{
+            $("a").text("更多");
+            $("li[title='2']").css("display","none");
+        }
+    });
+        
+    })
+</script>
     </body>
 </html>

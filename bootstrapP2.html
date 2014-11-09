@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+	<title>无标题</title>
+<link rel="stylesheet" type="text/css" href="css/responsive-nav.css">
+<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+
+<script type="text/javascript" src="js/responsive-nav.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-inverse" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">某管理系统</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">首页</a></li>
+        <li><a href="#">帮助</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">功能 <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="用户名">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="密码">
+        </div>
+        <button type="submit" class="btn btn-default">登陆</button>
+      </form>
+      
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-3">
+			<div id="nav_dada">
+  				<ul>
+				    <li><a href="#">Home</a></li>
+				    <li><a href="#">About</a></li>
+				    <li><a href="#">Projects</a></li>
+				    <li><a href="#">Contact</a></li>
+			  	</ul>
+			</div>
+		</div>
+      	<div class="col-md-9">
+
+      	</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+		
+
+<!-- 如果要使用Bootstrap的js插件，必须先调入jQuery -->
+        <script src="http://libs.baidu.com/jquery/1.9.0/jquery.min.js"></script>
+        <!-- 包括所有bootstrap的js插件或者可以根据需要使用的js插件调用　-->
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> 
+        <script>
+   			var navigation = responsiveNav("#nav_dada",{animate: true, // Boolean: Use CSS3 transitions, true or false
+		transition: 284, // Integer: Speed of the transition, in milliseconds
+		label: "Menu", // String: Label for the navigation toggle
+		insert: "before", // String: Insert the toggle before or after the navigation
+		customToggle: "", // Selector: Specify the ID of a custom toggle
+		closeOnNavClick: false, // Boolean: Close the navigation when one of the links are clicked
+		openPos: "relative", // String: Position of the opened nav, relative or static
+		navClass: "nav-collapse", // String: Default CSS class. If changed, you need to edit the CSS too!
+		navActiveClass: "js-nav-active", // String: Class that is added to <html> element when nav is active
+		jsClass: "js", // String: 'JS enabled' class which is added to <html> element
+		
+});
+
+		</script>
+</body>
+</html>
