@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<style type="text/css">
+	body{
+		text-align: center;
+		margin: 0;
+		padding: 0;
+	}
+	.container{
+		margin: 0 auto;
+		width: 460px;
+		height: 300px;
+		position: relative;
+	}
+	.container img{
+		height: 100%;
+  	object-fit: cover;
+		position: absolute;
+		left: 0;
+	}
+	.coverImg{
+		width: 0%;
+		height: 100%;
+		background: url(img/nannan21220.JPG);
+		background-size: auto 100%;
+		position: absolute;
+	}
+	.handle{
+		width: 0;
+		height: 100%;
+		border-right: 10px white solid;
+		position: absolute;
+		left: 0%;
+	}
+	.handle:after{
+		content: "拖动";
+		display: block;									/*此处重点*/
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		border: 5px solid #eee;
+		position: absolute;
+		left: -25px;
+		color: black;
+		line-height: 50px;
+		text-align: center;
+		font-family: '微软雅黑';
+		background-color: white;
+		top: 0; bottom: 0;
+		margin: auto;
+	}
+</style>
+<script type="text/javascript" src="http://cdn.staticfile.org/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://www.imooc.com/data/jquery-ui-1.9.2.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(function(){
+		$(".handle").draggable({
+			axis: "x",
+			containment:"parent",
+			drag : function(){
+				var position = $(this).position();
+				var positionExtra = position.left + 6;
+				$(".coverImg").width(positionExtra+'px');
+			}
+		})
+	})
+</script>
+</head>
+<body>
+	<h1>傻瓜楠楠</h1>
+	<div class="container">
+		<img src="img/nannan1220.JPG">
+		<div class="coverImg"></div>
+		<div class="handle"></div>
+	</div>
+</body>
+</html>
+
+<!-- 有bug，当鼠标拖到最右后，再往右拖动还是能拖下去， -->

@@ -1,3 +1,9 @@
-在form下的role属性是给读屏软件的
-不可以通过css直接修改图片的大小，这样操作图片就不会响应式了。
-html()获得元素的html格式，而text()获得文本。input元素使用val()。
+1在form下的role属性是给读屏软件的
+2不可以通过css直接修改图片的大小，这样操作图片就不会响应式了。
+3html()获得元素的html格式，而text()获得文本。input元素使用val()。
+4p:after,在p元素内的最后位置加上一个元素，content:"内容";
+5position() 方法返回匹配元素相对于父元素的位置（偏移）。
+该方法返回的对象包含两个整型属性：top 和 left，以像素计。
+此方法只对可见元素有效。
+6.绝对定位时若left:50%;则表示这个元素的总宽的最左边到父元素边的距离。
+7.上下居中方法：position:absolutu;top:0;bottom:0;margin:auto;
