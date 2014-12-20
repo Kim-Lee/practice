@@ -2,10 +2,10 @@
 var leftPos = (typeof windows.screenLeft == "number")? windows.screenLeft : windows.screenX;
 var topPos = (typeof windows.screenTop == "number")? windows.screenTop : windows.screenY;
 /*给背景透明*/
- filter:alpha(opacity=50);  
-      -moz-opacity:0.5;  
-      -khtml-opacity: 0.5;  
-      opacity: 0.5;  
+ filter:alpha(opacity=50);
+      -moz-opacity:0.5;
+      -khtml-opacity: 0.5;
+      opacity: 0.5;
 
 
 11

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="utf-8">
+<title></title>
+<style type="text/css">
+	div{
+		width: 200px;
+		height: 200px;
+		border: 1px solid black;
+		display: none;
+		position: absolute;
+	}
+	.active{
+		background-color: red;
+	}
+	.show{
+		display: block;
+	}
+</style>
+<script type="text/javascript" src="http://cdn.staticfile.org/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("body").find("input").click(function(){
+			$("body").find("input").attr('class','');
+			$("body").find("div").css('display','none');
+			$(this).addClass('active');
+			$("body").find("div").eq($(this).index()).css('display','block');
+		})
+	})
+</script>
+</head>
+<body>
+	<input type="button" class="active" value="1">
+	<input type="button" value="2">
+	<input type="button" value="3">
+	<div class="show">1111111</div>
+	<div>22222222</div>
+	<div>333333</div>
+</body>
+</html>
