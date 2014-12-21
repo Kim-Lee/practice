@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript" src="http://cdn.staticfile.org/jquery/1.11.1/jquery.min.js"></script>
+	<style type="text/css">
+		body{
+			margin: 0;
+			padding: 0;
+			background: url(img/background_qqzone.png) no-repeat 0 20px fixed;
+			padding-top: 42px;
+		}
+		div,a,span,p{
+			padding: 0;
+			margin: 0;
+		}
+		.fl{
+			float: left;
+		}
+		/*以上  reset*/
+		.top{
+			width: 100%;
+			height: 42px;
+			position: fixed;
+			top: 0;
+			background-color: rgb(4,177,200);
+			box-shadow: 0 5px 1px rgba(0,0,0,0.5);
+			z-index: 999;
+		}
+		.header{
+			width: 960px;
+			height: 150px;
+			background-color: rgba(255,255,255,0.5);
+			margin: 46px auto 27px;
+		}
+		.container{
+			width: 960px;
+			min-height: 2000px;
+			position: relative;
+			margin: 0 auto;
+			position: relative;
+		}
+		.slideLeft{
+			position: absolute;
+			top: 10px;left: 5px;
+			width: 50px;
+			min-height: 200px;
+		}
+		.slideLeft a{
+			display: block;
+			height: 26px;
+			line-height: 26px;
+			text-align: right;
+			font-size: 12px;
+			color: rgb(165,165,165);
+			border-right: 2px solid rgb(165,165,165);
+			padding-right: 5px;
+			text-decoration: none;
+		}
+		.slideLeft a:hover,
+		.slideLeft a.current{
+			color: rgb(126,186,208);
+			border-right-color: rgb(126,186,208);
+			font-weight: bold;
+		}
+		.slideLeft a:hover{
+			text-decoration: underline;
+		}
+		.slideLeft a.current{
+			text-decoration: none;
+		}
+		.content{
+			padding-top: 50px;
+			padding-left: 160px;
+			min-height: 2000px;
+			background: url(img/qzone_1.jpg) repeat-y 121px 0;
+		}
+		.content_year,.content_month{
+			position: relative;
+			left: -90px;
+			color: rgb(165,165,165);
+			font-size: 14px;
+			height: 26px;
+			line-height: 26px;
+		}
+		.content_item{
+			width: 371px;
+			background-color: white;
+			border-radius: 5px;
+			box-shadow: 1px 1px 3px rgba(0,0,0,.5);
+			position: relative;
+			padding: 15px 0;
+		}
+		.content_item_icon_arrow{
+			position: absolute;
+			top: 30px;
+			left: -10px;
+			border-width: 10px 10px 10px 0;
+			border-color: transparent white transparent transparent;
+			border-style: solid;
+		}
+		.content_item_icon_dot{
+			position: absolute;
+			top: 36px;
+			left: -43px;
+			width: 12px;
+			height: 12px;
+			border-radius: 12px;
+			background-color: white;
+		}
+		.content_item_icon_dot_child{
+			position: absolute;
+			top: 2px;
+			left: 2px;
+			width: 8px;
+			height: 8px;
+			border-radius: 8px;
+			background-color: rgb(157,207,225);
+		}
+		.content_item_head{
+			height: 46px;
+			padding: 0 15px 10px;
+			line-height: 46px;
+			font-size: 26px
+		}
+		.content_item_head_lunar{
+			width: 46px;
+			height: 46px;
+			border-radius: 5px;
+			background-color: rgb(146,202,222);
+			color: white;
+			line-height: 23px;
+			font-family: "微软雅黑";
+			margin-right: 10px;
+		}
+		.content_item_head span{
+			color: rgb(171,171,171);
+			font-family: "微软雅黑";
+		}
+		.content_item_media_word,.content_item_media_pic{
+			padding: 0 15px 10px;
+			max-height: 200px;
+			overflow: hidden;
+			font-family: "微软雅黑";
+		}
+		.content_item_media_pic img{
+			box-shadow: 2px 2px 1px rgba(0,0,0,.5);
+		}
+		.content_item_footer{
+			padding: 10px 15px 0;
+			border-top: 1px #eee solid;
+			margin-top: 10px;
+		}
+		.ico_com{
+			width: 21px;
+			height: 21px;
+			overflow: hidden;
+			display: inline-block;
+		}
+		.ico_zan{
+			background-image: url(img/1221_qqzone_3.png);
+			background-position: -883px -21px;
+		}
+		.ico_pinglun{
+			background-image: url(img/1221_qqzone_3.png);
+		  background-position: -898px -84px;
+		}
+	</style>
+</head>
+<body>
+	<div class="top"></div>
+	<div class="header"></div>
+	<div class="container">
+		<div class="slideLeft">
+			<a href="#" class="current">2014年</a>
+			<a href="#">三月</a>
+			<a href="#">四月</a>
+		</div>
+		<div class="content">
+			<div class="content_year">2014年</div>
+			<div class="content_month">三月</div>
+			<div class="content_item">
+				<div class="content_item_icon_arrow"></div>
+				<div class="content_item_icon_dot">
+					<div class="content_item_icon_dot_child"></div>
+				</div>
+				<div class="content_item_head">
+					<div class="content_item_head_lunar fl">三<br>&nbsp;&nbsp;&nbsp;十</div>
+					<span class="fl">2014-03-30</span>
+				</div>
+				<div class="content_item_media">
+					<div class="content_item_media_word">
+						<p>hshshshshsh绝对狙击活动活动的活动活动活动活动好</p>
+					</div>
+					<div class="content_item_media_pic">
+						<img src="img/nannan21220.JPG" width="340px">
+					</div>
+				</div>
+				<div class="content_item_footer">
+					<div class="ico_zan ico_com"></div>
+					<div class="ico_pinglun ico_com"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
