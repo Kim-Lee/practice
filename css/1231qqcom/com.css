@@ -65,3 +65,54 @@ body,div,ul,li,input,img{
 	font-weight: bold;
 	font-family: "微软雅黑";
 }
+.navBar{
+	height: 63px;
+	border-bottom: 1px solid #359ddc;
+	background-color: #3896d6;
+	box-shadow: 0 1px 1px #337bc3;
+	overflow: hidden;
+}
+.navBar_box{
+	margin: 9px auto;
+	height: 47px;
+	border-right: 1px solid #3888c7;
+	box-shadow: 1px 0 1px #50a5e5;
+	padding-left: 17px;
+	padding-right: 17px;
+}
+.navBar_box_first{
+	margin-left: 12px;
+}
+.navBar_box_last{
+	border-right: none;
+	box-shadow: none;
+	padding-left: 17px;
+}
+.navBar_box ul li{
+	float: left;
+	list-style: none;
+}
+.navBar_box_li_first{
+	font-weight: bolder;
+}
+
+.navBar_box a{
+	display: block;
+	font-size: 13px;
+	text-decoration: none;
+	color: white;
+	font-family: "微软雅黑";
+	width: 36px;
+	height: 24px;
+	text-align: center;
+	line-height: 26px;
+}
+.navBar_box .navBar_active{
+	color: #3D95D5;
+	background-color: rgb(202,225,238);
+}
+.navBar_box .navBar_box_a_more{
+	width: 53px;
+	background: url(../../img/1231qqcom/header_arrow.png) no-repeat ;
+	background-position: center right;
+}

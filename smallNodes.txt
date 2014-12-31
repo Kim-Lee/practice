@@ -8,3 +8,4 @@
 6.绝对定位时若left:50%;则表示这个元素的总宽的最左边到父元素边的距离。
 7.上下居中方法：position:absolutu;top:0;bottom:0;margin:auto;
 8.绝对定位的点画一个长方形则是以左下角为起点向右向上画。
+css选择器的权重值，id100，class10，标签1。若在css中写元素，p{padding:100px}跟           div p{padding:120px} 的权重值是不一样的，前者1，后者101。
