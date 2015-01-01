@@ -1,7 +1,11 @@
 /*reset*/
-body,div,ul,li,input,img{
+body,div,ul,li,input,img,a,p{
 	padding: 0;
 	margin: 0;
+	font-size: 14px;
+}
+a{
+	text-decoration: none;
 }
 .fl{
 	float: left;
@@ -12,10 +16,12 @@ body,div,ul,li,input,img{
 .clear{
 	clear: both;
 }
+/*container*/
 .container{
 	width: 1000px;
 	margin: 0 auto;
 }
+/*最上面一部分，搜索，登陆*/
 .header{
 	height: 50px;
 	padding: 20px 0 20px 159px;
@@ -65,6 +71,7 @@ body,div,ul,li,input,img{
 	font-weight: bold;
 	font-family: "微软雅黑";
 }
+/*导航*/
 .navBar{
 	height: 63px;
 	border-bottom: 1px solid #359ddc;
@@ -115,4 +122,113 @@ body,div,ul,li,input,img{
 	width: 53px;
 	background: url(../../img/1231qqcom/header_arrow.png) no-repeat ;
 	background-position: center right;
+}
+/*nav下的广告*/
+.ad{
+	height: 75px;
+	padding: 12px 0;
+}
+/*要闻，左边第一列*/
+.content_newsOfZhejiang{
+	width: 350px;
+	border-top: solid 1px #c8dcf2;
+	margin-right: 25px;
+	padding-bottom: 20px;
+}
+
+/*内容页的标题样式*/
+.content_header{
+	height: 41px;
+	width: 100%;
+	margin-top: -1px;
+}
+.content_header li{
+	height: 15px;
+	padding: 8px 18px 17px 18px;
+	list-style-type: none;
+	float: left;
+	display: block;
+	font-size: 14px;
+}
+.container .contentSelected{
+	background: url(../../img/1231qqcom/content_selected.png) repeat-x top left;
+	border-left: 1px solid white;
+	border-right: 1px solid white;
+}
+.content_header a{
+	text-decoration: none;
+	color: #0873c0;
+	font-weight: bold;
+}
+.content_newsOfZhejiang_T{
+	height: 15px;
+	padding: 8px 18px 17px 18px;
+	font-size: 12px;
+}
+.content_newsOfZhejiang_T span{
+	background: url(../../img/1231qqcom/content_newsOfZhejiang_T.png) no-repeat 25px center;
+	cursor:pointer;
+}
+/*内容页新闻列表*/
+.content_newsOfZhejiang_list li{
+	list-style: none;
+	line-height: 28px;
+}
+.content_newsOfZhejiang_list a{
+	text-decoration: none;
+	color: black;
+}
+.content_newsOfZhejiang_list a:hover{
+	text-decoration: underline;
+	color: red;
+}
+/*内容页新闻图文*/
+.content_newsOfZhejiang_pic{
+	padding: 17px 34px 13px 0;
+}
+.content_newsOfZhejiang_pic a{
+	margin-top: 5px;
+	margin-left: 10px;
+	color: #3b639f;
+	text-decoration: none;
+	font-family :"微软雅黑";
+	font-weight: bold;
+	font-size: 15px;
+}
+.content_newsOfZhejiang_pic a:hover{
+	text-decoration: underline;
+}
+.leftContent{
+	width: 760px;
+}
+
+
+/*右边内容页*/
+.content_table{
+	width: 238px;
+	border: 1px solid #d2e1f1;
+}
+.content_table ul{
+	padding: 11px 0;
+	height: 17px;
+
+}
+.content_table li{
+	list-style: none;
+	display: block;
+	float: left;
+	padding: 0 8px ;
+}
+.content_table a{
+	color: #294c7f;
+	font-family: "arial";
+}
+.content_table_ul2,.content_table_ul4{
+	background-color: #eef6fc ;
+}
+.content_table .content_table_ul3{
+	height: 40px;
+}
+.content_table_ul3 li{
+	padding-bottom: 5px ;
 }
