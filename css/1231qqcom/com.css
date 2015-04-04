@@ -199,7 +199,7 @@ a{
 	text-decoration: underline;
 }
 .leftContent{
-	width: 760px;
+	width: 750px;
 }
 
 
@@ -207,6 +207,7 @@ a{
 .content_table{
 	width: 238px;
 	border: 1px solid #d2e1f1;
+	position: relative;
 }
 .content_table ul{
 	padding: 11px 0;
@@ -218,6 +219,16 @@ a{
 	display: block;
 	float: left;
 	padding: 0 8px ;
+}
+.content_table_leftButton{
+	width: 15px;
+	height: 38px;
+	border: 1px solid #d2e1f1;
+	border-right: none;
+	position: absolute;
+	left: -16px;
+	top: -1px;
+	background: url(../../img/1231qqcom/content_table_leftButton.jpg) no-repeat center;
 }
 .content_table a{
 	color: #294c7f;
@@ -231,4 +242,36 @@ a{
 }
 .content_table_ul3 li{
 	padding-bottom: 5px ;
+}
+/*右边table下的广告滑动窗口*/
+.adOfJd{
+	width: 218px;
+	height: 270px;
+	border: 1px solid #c71521;
+	margin-top: 12px;
+	background: url(../../img/1231qqcom/ad_belowTable.png) no-repeat center top;
+	overflow: hidden;
+	padding: 35px 10px 5px;
+}
+.adOfJd p{
+	margin: 15px 0;
+}
+.adOfJd div{
+	display: none;
+}
+.adOfJd .adOfJd_show{
+	display: block;
+}
+.adJdUlLine{
+	display: block;
+	float: left;
+	list-style: none;
+	height: 4px;
+	width: 20px;
+	background-color: #ddd;
+	margin: 6px;
+	cursor: pointer;
+}
+.adJdUlLine_selected{
+	background-color: #c91521;
 }

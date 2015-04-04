@@ -1,0 +1,184 @@
+												/*reset*/
+body,div,ul,li,img,dl,dt,dd{
+	margin: 0;
+	padding: 0;
+	font-size: 12px;
+}
+a{
+	text-decoration: none;
+	color: black;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.clear{
+	clear: both;
+}
+			           /*top*/
+.top{
+	width: 1349px;
+	height: 43px;
+	background-color: #333333;
+	border-bottom: 2px solid #606060;
+	position: fixed;
+	top: 0px;
+	z-index: 99999;
+}
+.top_middle{
+	margin:0 auto;
+	width: 960px;
+}
+.top_middle ul li{
+	float: left;
+	list-style: none;
+	color: #ffffff;
+}
+.top_middle ul li a{
+	color: #ffffff;
+	height: 43px;
+	line-height: 43px;
+	display: block;
+	padding: 0 17px;
+}
+.a_index:hover{
+	text-decoration: underline;
+}
+.top_middle_right .a_register{
+	background-color: #D21212;
+	height: 45px;
+	border-bottom: 4px #8F2F2F solid;
+}
+.top_middle_right .a_register_noborder{
+	border-right: none;
+	border-left: none;
+}
+.top_middle_right ul li a{
+	border-right: 1px solid #1f1f1f;
+	border-left: 1px solid #3f3f3f;
+}
+.top_right_icon{
+	background-repeat: no-repeat;
+	background-position: center;
+	overflow: hidden;
+}
+.top_right_mail{
+	background-image: url(../../img/0211_163web/20150211015303370_easyicon_net_21.298013245.png);
+}
+.top_right_money{
+	background-image: url(../../img/0211_163web/20150211015538735_easyicon_net_16.png);
+}
+.top_right_friend{
+	background-image: url(../../img/0211_163web/20150211015843374_easyicon_net_16.png);
+}
+.top_right_buy{
+	background-image: url(../../img/0211_163web/20150211020011675_easyicon_net_17.3333333333.png);
+}
+													/*header*/
+.container{
+	width: 960px;
+	min-height: 1900px;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+.header{
+	height: 40px;
+	padding: 35px 0 15px;
+	border-bottom: 4px solid #206F96;
+}
+.header_ad img{
+	margin-left: 10px;
+}
+																/*nav*/
+.navMain{
+	height: 66px;
+	margin: 15px 16px 20px 0px;
+	padding: 0 16px 0 0;
+	border-right: 1px dashed #DCDDDD;
+	overflow: hidden;
+}
+.navMain_width{
+	width: 135px;
+}
+.navMain_removeBorder{
+	height: 66px;
+	margin: 15px 0 20px 0px;
+	padding: 0 16px 0 0;
+	border-right: none;
+}
+.navMain li{
+	list-style: none;
+	float: left;
+	margin-bottom: 10px;
+}
+.navMain a{
+	text-decoration: none;
+	margin-left: 18px;
+		width: 25px;
+		display: block;
+		white-space: nowrap;
+}
+.navMain a:hover{
+	text-decoration: underline;
+	color: #901D2A;
+}
+.navMain .navMain_strong{
+	font-weight: bold;
+	margin-left: 0;
+}
+									/*header下的广告*/
+.adBanner{
+	width: 958px;
+	height: 158px;
+	border: 1px solid #DCDDDD;
+	background-color: #F9F9F9;
+	overflow: hidden;
+}
+.ad_nav_left{
+	width: 18px;
+	height: 156px;
+	margin: 1px 0 0 1px;
+}
+.ad_nav_left li{
+	list-style: none;
+	margin-bottom: 1px;
+	position: relative;
+}
+.ad_nav_left a{
+	width: 18px;
+	height: 39px;
+	background-color: #E6EAED;
+	display: block;
+	text-align: center;
+	padding-top: 12px;
+	color: #376A77;
+}
+.ad_nav_left .show_arrow_left{
+	background-color: #D1DAE1;
+}
+.adBanner_arr_left{
+	width: 0;
+	height: 0;
+	border-width: 4px 0 4px 4px ;
+	border-color: transparent transparent transparent #D1DAE1;
+	border-style: dashed dashed dashed solid;
+	position: absolute;
+	top: 50%;
+	right: -4px;
+}
+.ad_list_left{
+	padding: 13px 10px;
+}
+.ad_list_left li{
+	list-style: none;
+	margin-bottom: 10px;
+}
+.adBanner a{
+	color: #376A77;
+}
+.adBanner a:hover{
+	text-decoration: underline;
+	color: #901D2A;
+}
