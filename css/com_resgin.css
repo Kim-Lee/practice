@@ -1,0 +1,164 @@
+			/*reset*/
+body,div,input,span,p{
+	margin: 0;
+	padding: 0;
+}
+html{
+	background: url(../img/background.jpg);
+	background-repeat: no-repeat;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+			/*登录界面*/
+#container{
+	width: 485px;
+	height: 360px;
+	margin: 0 auto;
+	position: relative;
+	margin-top: 165px;
+}
+.transparent{
+	width: 485px;
+	height: 360px;
+	filter:alpha(opacity=50);
+	-moz-opacity:0.5;
+	-khtml-opacity: 0.5;
+	opacity: 0.5;
+	background-color: white;
+	-moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius:15px;
+}
+.closed{
+	display: block;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 24px;
+	height: 24px;
+	background-image: url(../img/20141212085215339_easyicon_net_24.png);
+	filter:alpha(opacity=50);
+	-moz-opacity:0.5;
+	-khtml-opacity: 0.5;
+	opacity:0.5;
+}
+.username{
+	width: 381px;
+	height: 47px;
+	background-color: white;
+	filter:alpha(opacity=75);
+	-moz-opacity:0.75;
+	-khtml-opacity: 0.75;
+	opacity: 0.75;
+	position: absolute;
+	left: 50px;
+	top: 50px;
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius:5px;
+}
+.username div{
+	width: 21px;
+	height: 18px;
+	background-image: url(../img/20141212031028196_easyicon_net_24.png);
+	background-repeat: no-repeat;
+	margin-left: 10px;
+	margin-top: 13px;
+}
+.username input{
+	margin-left: 20px;
+	display: block;
+	border:0;
+	height: 30px;
+	width: 300px;
+	margin-top: 9px;
+	outline: none;
+}
+
+.password{
+	width: 381px;
+	height: 47px;
+	background-color: white;
+	filter:alpha(opacity=75);
+	-moz-opacity:0.75;
+	-khtml-opacity: 0.75;
+	opacity: 0.75;
+	position: absolute;
+	left: 50px;
+	top: 117px;
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius:5px;
+}
+.password div{
+	width: 21px;
+	height: 18px;
+	background-image: url(../img/20141212065300886_easyicon_net_24.png);
+	background-repeat: no-repeat;
+	margin-left: 10px;
+	margin-top: 13px;
+}
+.password input{
+	margin-left: 20px;
+	display: block;
+	border:0;
+	height: 30px;
+	float: left;
+	margin-top: 9px;
+	width: 300px;
+	outline: none;
+}
+.changeUandP{
+	border-top-left-radius:0;
+	border-bottom-left-radius:0;
+	border-left:5px solid black;
+	width:376px;
+}
+.remenber{
+	width: 381px;
+	height: 20px;
+	position: absolute;
+	left: 50px;
+	top: 184px;
+	font-family: "黑体";
+	color: rgb(97,97,97);
+	line-height: 20px;
+}
+.remenber input{
+	width: 20px;
+	height: 20px;
+}
+.login{
+	width: 381px;
+	height: 47px;
+	background-color:rgb(46,176,111); ;
+	position: absolute;
+	left: 50px;
+	top: 224px;
+	text-align: center;
+	line-height: 47px;
+	font-weight: bold;
+	font-size: 26px;
+	font-family: "微软雅黑";
+	-moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    border-radius:25px;
+}
+.login a{
+	text-decoration: none;
+	color: white;
+
+}
+.tip{
+	width: 381px;
+	top: 281px;
+	left: 50px;
+	position: absolute;
+	text-align: center;
+	color: #666666;
+	font-family: "微软雅黑";
+}
