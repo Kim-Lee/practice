@@ -1,0 +1,114 @@
+body,ul,li,div,img,a{
+	padding: 0;
+	margin: 0;
+}
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+.clear{
+	clear: both;
+}
+/*以上为reset*/
+#container{
+	width: 400px;
+	position: relative;
+	margin: 0 auto;
+	padding: 10px;
+	background-color: #cdcdcd;
+}
+.top_main{
+	height: 500px;
+	position: relative;
+}
+.hide_left{
+	width: 200px;
+	height: 500px;
+	opacity: 0.3;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 3333;
+}
+.hide_right{
+	width: 200px;
+	height: 500px;
+	opacity: 0.3;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 3333;
+}
+.pic_big{
+	height: 500px;
+}
+.pic_big li{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 400px;
+	height: 500px;
+	list-style: none;
+	overflow: hidden;
+}
+.btn_pre{
+	background-color: blue;
+	position: absolute;
+	top:225px;
+	left: 0;
+	width: 50px;
+	height: 50px;
+	z-index: 4444;
+	opacity: 0;
+	filter:alpha(opacity:0);
+}
+.btn_next{
+	background-color: blue;
+	position: absolute;
+	top:225px;
+	right: 0;
+	width: 50px;
+	height: 50px;
+	z-index: 4444;
+	opacity: 0;
+	filter:alpha(opacity:0);
+}
+.txt_content{
+	height: 30px;
+	width: 340px;
+	padding-left: 30px;
+	padding-right: 30px;
+	opacity: 0.3;
+	filter:alpha(opacity:30);
+	position: absolute;
+	bottom: 0;
+	background-color: black;
+	line-height: 30px;
+	font-size: 14px;
+	color: white;
+	z-index: 99999;
+}
+.pic_small_box{
+	overflow: hidden;
+	margin-top: 10px;
+	height: 125px;
+	position: relative;
+}
+.pic_small{
+	cursor: pointer;
+	height: 125px;
+	position: absolute;
+	left: 0;
+}
+.pic_small li{
+	list-style: none;
+	float: left;
+	width: 100px;
+	height: 125px;
+	opacity: 0.3;
+	filter:alpha(opacity:30);
+}
+
+

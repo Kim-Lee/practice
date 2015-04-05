@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<meta charset="utf-8">
+		<title>小练习部分汇总</title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			#container{
+				width: 600px;
+				margin: 200px auto;
+				border: 4px solid #cdcdcd;
+				border-radius: 50px;
+				overflow: hidden;
+			}
+			li{
+				list-style: none;
+				padding: 20px 230px;
+				cursor: pointer;
+			}
+			a{
+				text-decoration: none;
+				color: black;
+				font-family: "黑体";
+			}
+			a:hover{
+				text-decoration: underline;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<ul>
+				<li><a href="仿flash的图片切换/index.html" target="_blank">相册js</a></li>
+				<li><a href="1220_2.html" target="_blank">窗帘</a></li>
+				<li><a href="chatroom/index.html" target="_blank">coding登陆框</a></li>
+				<li><a href="1231qqcom.html" target="_blank">QQ.com静态</a></li>
+				<li><a href="0211_163web.html" target="_blank">163.com静态</a></li>
+				<li><a href="1221_1qqzone.html" target="_blank">QQ空间时间轴静态</a></li>
+			</ul>
+		</div>
+		<script type="text/javascript">
+			window.onload = function(){
+				var oDiv = document.getElementById("container");
+				var aList = oDiv.getElementsByTagName("li");
+				for(i=0;i<aList.length;i++){
+					aList[i].onmouseover = function(){
+						this.style.background = "#cdcdcd";
+					}
+					aList[i].onmouseout = function(){
+						this.style.background = "";
+					}
+				}
+			}
+		</script>
+	</body>
+</html>
