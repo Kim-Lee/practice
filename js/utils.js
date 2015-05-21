@@ -340,7 +340,7 @@ function addEnterEvent(element, listener) {
                         var ev = ev || event;
                         var target = ev.target || ev.srcElement;
                         if (target.nodeName.toLowerCase() == tag) {
-                            listener(target);//传参数给listener函数
+                            listener(e);//传参数给listener函数
                         }
                     },false)
                 } else if (element.attachEvent) {
@@ -348,14 +348,14 @@ function addEnterEvent(element, listener) {
                         var ev = ev || event;
                         var target = ev.target || ev.srcElement;
                         if (target.nodeName.toLowerCase() == tag) {
-                            listener(target);//传参数给listener函数
+                            listener(e);//传参数给listener函数
                         }
                     })
                 }else {
                     element["on" + eventName] = function (ev) {
                         var oEvent = ev || event;
                         if (oEvent.keyCode == 13) {
-                            listener(target);
+                            listener(e);
                         }
                     };
                 }
@@ -393,7 +393,7 @@ function delegateEvent(element, tag, eventName, listener) {
             var ev = ev || event;
             var target = ev.target || ev.srcElement;
             if (target.nodeName.toLowerCase() == tag) {
-                listener(target);//传参数给listener函数
+                listener(ev);//传参数给listener函数
             }
         },false)
     } else if (element.attachEvent) {
@@ -401,14 +401,15 @@ function delegateEvent(element, tag, eventName, listener) {
                     var ev = ev || event;
                     var target = ev.target || ev.srcElement;
                     if (target.nodeName.toLowerCase() == tag) {
-                        listener(target);//传参数给listener函数
+                        listener(ev);//传参数给listener函数
                     }
                 })
             }else {
                 element["on" + eventName] = function (ev) {
-                    var oEvent = ev || event;
-                    if (oEvent.keyCode == 13) {
-                        listener(target);
+                    var ev = ev || event;
+                    var target = ev.target || ev.srcElement;
+                    if (target.nodeName.toLowerCase() == tag) {
+                        listener(ev);//传参数给listener函数
                     }
                 };
             }
@@ -470,8 +471,9 @@ $.delegate = function (selector, tag, eventName, listener) {
                 }else {
                     element["on" + eventName] = function (ev) {
                         var e = ev || event;
-                        if (oEvent.keyCode == 13) {
-                            listener(e);
+                        var target = e.target || e.srcElement;
+                        if (target.nodeName.toLowerCase() == tag) {
+                            listener(e);//传事件对象给listener函数
                         }
                     };
                 }
@@ -606,4 +608,11 @@ function index(elem) { //parentNode.parentNode此处非常不妥
             return i;
         }
     }
+}
+function extend(Child, Parent) {
+    var F = function(){};
+    F.prototype = Parent.prototype;
+    Child.prototype = new F();
+    Child.prototype.constructor = Child;
+    // child.uber = Parent.prototype;
 }
