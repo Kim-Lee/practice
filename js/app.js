@@ -1,27 +1,17 @@
 var MYAPP = MYAPP || {};
 MYAPP.reEditContent = {};//编辑任务时的临时内容
 MYAPP.Data = [];//存放分类文件夹-所有任务
-for (var i=0; i<1000; i++) {
-    MYAPP.Data.push(new Array());
-}
 MYAPP.index = 0;//点击分类列表时当前index值赋给此全局变量
 MYAPP.timeBoxList = [];//存放某个文件夹的time-task列表-所有任务
 MYAPP.timeBoxListFinished = [];//存放某个文件夹的time-task列表-已完成
 MYAPP.timeBoxListUnFinished = [];//存放某个文件夹的time-task列表-未完成
 MYAPP.taskNum = [];
-for (var i=0; i<100; i++) {
-    MYAPP.taskNum.push(0);
-}
 MYAPP.subIndex = 0; //点击time-task列表时当前id值赋给此全局变量
 // MYAPP.Num = 0;//添加新分类时就会累加Num
 MYAPP.DataFinished = [];
-for (var i=0; i<1000; i++) {
-    MYAPP.DataFinished.push(new Array());
-}
+
 MYAPP.DataUnFinished = [];
-for (var i=0; i<1000; i++) {
-    MYAPP.DataUnFinished.push(new Array());
-}
+
 MYAPP.todoFunctions = {};
 
 MYAPP.todoFunctions.classifySet = function () {
@@ -149,7 +139,6 @@ MYAPP.classify.ele.buildDd = function (title) {
     }
     if (highLightbg) {
 
-        // MYAPP.Num ++;
         var numItems = parseInt(localStorage.getItem("MYAPP.Num"));
         if (localStorage.getItem("MYAPP.Num")) {
             numItems = numItems + 1;
@@ -160,8 +149,40 @@ MYAPP.classify.ele.buildDd = function (title) {
         }
         bb.id = parseInt(localStorage.getItem("MYAPP.Num"));
         highLightbg.parentNode.appendChild(bb);
-        /*var arrFile = [];
-        MYAPP.Data.length += 1;*/
+
+        //把数据存进localStorage
+        var MYAPPData = JSON.parse(localStorage.getItem("MYAPP.Data"));
+        if (MYAPPData) {
+            MYAPPData.push(new Array());
+            localStorage.setItem("MYAPP.Data", JSON.stringify(MYAPPData));
+        } else {
+            var MYAPPDataFirst = [];
+            MYAPPDataFirst.push(new Array());
+            MYAPPDataFirst.push(new Array());
+            localStorage.setItem("MYAPP.Data", JSON.stringify(MYAPPDataFirst));
+        }
+
+        var MYAPPDataFinished = JSON.parse(localStorage.getItem("MYAPP.DataFinished"));
+        if (MYAPPDataFinished) {
+            MYAPPDataFinished.push(new Array());
+            localStorage.setItem("MYAPP.DataFinished", JSON.stringify(MYAPPDataFinished));
+        } else {
+            var MYAPPDataFinishedFirst = [];
+            MYAPPDataFinishedFirst.push(new Array());
+            MYAPPDataFinishedFirst.push(new Array());
+            localStorage.setItem("MYAPP.DataFinished", JSON.stringify(MYAPPDataFinishedFirst));
+        }
+
+        var MYAPPDataUnFinished = JSON.parse(localStorage.getItem("MYAPP.DataUnFinished"));
+        if (MYAPPDataUnFinished) {
+            MYAPPDataUnFinished.push(new Array());
+            localStorage.setItem("MYAPP.DataUnFinished", JSON.stringify(MYAPPDataUnFinished));
+        } else {
+            var MYAPPDataUnFinishedFirst = [];
+            MYAPPDataUnFinishedFirst.push(new Array());
+            MYAPPDataUnFinishedFirst.push(new Array());
+            localStorage.setItem("MYAPP.DataUnFinished", JSON.stringify(MYAPPDataUnFinishedFirst));
+        }
     }
 
     console.log("分类文件夹数组个数" + MYAPP.Data.length)
@@ -579,7 +600,7 @@ MYAPP.timelist.ele.addArrayUnfinished = function () {
         localStorage.setItem("MYAPP.DataUnFinished", JSON.stringify(MYAPP.DataUnFinished));
     }
 }
-MYAPP.timelist.ele.updateTaskInfo = function () {
+/*MYAPP.timelist.ele.updateTaskInfo = function () {
     var oTimeBox = $("#task-timelist-list");
     var listObj = MYAPP.Data[MYAPP.index];
     var oTimeBoxDt = oTimeBox.getElementsByTagName("dt");
@@ -625,7 +646,7 @@ MYAPP.timelist.ele.updateTaskInfo = function () {
         oDl2.innerHTML = arrNewDl[i].innerHTML;
         oTimeBox.appendChild(oDl2);
     }
-}
+}*/
 
 MYAPP.timelist.ele.updateTimeListReEdit = function (ele, whichFile) {
     var oTimeBox = ele;//包裹器
@@ -1027,34 +1048,6 @@ MYAPP.timelist.todoFunctions.finish = function () {
             //默认分类计数
             $("#classify-default").getElementsByTagName("p")[0].getElementsByTagName("span")[0].innerHTML = '(' + parseInt(JSON.parse(localStorage.getItem("MYAPP.DataUnFinished"))[0].length) + ')';
 
-
-                /*//点击确认增加时把当前task-time-all列表，存到内存
-                var MYAPPTimeBoxList = JSON.parse(localStorage.getItem("MYAPP.timeBoxList"));
-                if (MYAPPTimeBoxList) {
-                    MYAPPTimeBoxList[MYAPP.index] = $("#task-timelist-list").innerHTML;
-                    localStorage.setItem("MYAPP.timeBoxList", JSON.stringify(MYAPPTimeBoxList));
-                } else {
-                    MYAPP.timeBoxList[MYAPP.index] = $("#task-timelist-list").innerHTML;
-                    localStorage.setItem("MYAPP.timeBoxList", JSON.stringify(MYAPP.timeBoxList));
-                }
-                //将目前的time-task-finished列表存到内存
-                var MYAPPTimeBoxListFinished = JSON.parse(localStorage.getItem("MYAPP.timeBoxListFinished"));
-                if (MYAPPTimeBoxListFinished) {
-                    MYAPPTimeBoxListFinished[MYAPP.index] = $("#task-timelist-list-finished").innerHTML;
-                    localStorage.setItem("MYAPP.timeBoxListFinished", JSON.stringify(MYAPPTimeBoxListFinished));
-                } else {
-                    MYAPP.timeBoxListFinished[MYAPP.index] = $("#task-timelist-list-finished").innerHTML;
-                    localStorage.setItem("MYAPP.timeBoxListFinished", JSON.stringify(MYAPP.timeBoxListFinished));
-                }
-                //将目前的time-task-unfinished-列表存到内存
-                var MYAPPTimeBoxListUnFinished = JSON.parse(localStorage.getItem("MYAPP.timeBoxListUnFinished"));
-                if (MYAPPTimeBoxListUnFinished) {
-                    MYAPPTimeBoxListUnFinished[MYAPP.index] = $("#task-timelist-list-unfinished").innerHTML;
-                    localStorage.setItem("MYAPP.timeBoxListUnFinished", JSON.stringify(MYAPPTimeBoxListUnFinished));
-                } else {
-                    MYAPP.timeBoxListUnFinished[MYAPP.index] = $("#task-timelist-list-unfinished").innerHTML;
-                    localStorage.setItem("MYAPP.timeBoxListUnFinished", JSON.stringify(MYAPP.timeBoxListUnFinished));
-                }*/
                 MYAPP.todoFunctions.saveInterface();
 
                 //将编辑和完成两个按钮隐藏
